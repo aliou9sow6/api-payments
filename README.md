@@ -30,16 +30,16 @@ Ce projet est le backend de l’application Flutter (web & mobile) permettant à
 
 ## ⚙️ Installation locale
 
-### 1. Cloner le projet
+### Cloner le projet
 
 ```bash
 git clone https://github.com/aliou9sow6/api-payments.git
 cd backend-paiements
 
-2) Installer les dépendances
+1) Installer les dépendances
 composer install
 
-3) Configurer l’environnement
+2) Configurer l’environnement
 
 Copiez .env.example en .env puis adaptez :
 
@@ -65,13 +65,13 @@ SESSION_DOMAIN=localhost
 JWT_SECRET=changeme
 JWT_TTL=120
 
-4) Générer la clé d’application
+3) Générer la clé d’application
 php artisan key:generate
 
-5) Migrer la base & données de test
+4) Migrer la base & données de test
 php artisan migrate --seed
 
-6) Lancer le serveur de dev
+5) Lancer le serveur de dev
 php artisan serve
 
 🔐 Authentification
