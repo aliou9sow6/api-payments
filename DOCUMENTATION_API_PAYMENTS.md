@@ -573,8 +573,8 @@ SESSION_SECURE_COOKIE=true
 ## 📝 Notes importantes
 
 ### Sécurité
-- Les tokens Sanctum expirent automatiquement
-- Les mots de passe sont hashés avec bcrypt
+- Les tokens Sanctum expirent automatiquement, aprés 60 munites
+- Les mots de passe sont hashés avec Hash
 - Les uploads de fichiers sont validés (type et taille)
 - Les autorisations sont gérées par les Policies Laravel
 
