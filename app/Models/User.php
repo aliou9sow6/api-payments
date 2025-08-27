@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -47,8 +48,46 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * The attributes that should have default values.
+     *
+     * @var array<string, mixed>
+     */
+    protected $attributes = [
+        'role' => 'user',
+    ];
+
     public function payments()
     {
-        return $this->hasMany(related: Payment::class);
+        return $this->hasMany(Payments::class);
+    }
+
+    public function recurringPayments()
+    {
+        return $this->hasMany(RecurringPayment::class);
+    }
+
+    /**
+     * Check if user has a specific role
+     */
+    public function hasRole(string $role): bool
+    {
+        return $this->role === $role;
+    }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->hasRole('admin');
+    }
+
+    /**
+     * Check if user is regular user
+     */
+    public function isUser(): bool
+    {
+        return $this->hasRole('user');
     }
 }

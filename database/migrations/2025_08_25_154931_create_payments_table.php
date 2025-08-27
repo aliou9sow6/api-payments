@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->decimal('amount', 10, 2);
+            $table->string('description')->nullable();
+            $table->string('currency', 3);
+            $table->enum('payment_method', ['credit_card', 'paypal', 'bank_transfer', 'crypto','Diokopay'])->default('Diokopay');
+            $table->text('proof')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }
