@@ -15,4 +15,5 @@ Ce projet est le backend de l’application Flutter (web & mobile) permettant à
 - Filtres par date (jour/mois/année)
 - (Bonus) JWT pour sécuriser les endpoints
 
-la documentation de l'API : https://github.com/aliou9sow6/api-payments/blob/master/DOCUMENTATION_API_PAYMENTS.md
+
+[Documentation complète de l’API](https://github.com/aliou9sow6/api-payments/blob/master/DOCUMENTATION_API_PAYMENTS.md)
