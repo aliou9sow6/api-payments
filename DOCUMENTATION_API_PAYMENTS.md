@@ -630,4 +630,4 @@ php artisan tinker
 
 ---
 
-*Documentation générée pour l'API Payments v1.0 - Dernière mise à jour : 2024*
+*Documentation de l'API Payments v1.0*
